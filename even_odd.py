@@ -10,8 +10,6 @@ def even_or_odd(number):
     else:
         print(number, "is not an even number")
 
-    pass
-
 
 def main():
     number = int(input("Please enter the number "))

@@ -1,17 +1,27 @@
 import unittest
 from even_odd import even_or_odd
+from abs_value import absolute_value
+from maximum import biggest_number
 
 
 class MyTestCase(unittest.TestCase):
-    def test_even_odd(self):
-        self.assertEqual("13 is an odd number", even_or_odd(13))
-        self.assertEqual("24 is an even number", even_or_odd(24))
+    def test_bonus(self):
+        self.assertEqual(5, absolute_value(-5))
+        self.assertEqual(5, absolute_value(5))
+        self.assertEqual(10, absolute_value(10))
+
+    def test_max(self):
+        self.assertEqual(10, biggest_number(10, 5))
+        self.assertEqual(10, biggest_number(5, 10))
+        self.assertEqual(10, biggest_number(-5, 10))
+        self.assertEqual(-10, biggest_number(-5, -10))
+
+
+
+
 
     # In the space below, write a test function for bonus. Make sure to import the appropriate information
     # at the top of this file. Make sure to write three test cases.
-    def test_bonus(self):
-        # when you are ready to write your tests, go ahead and delete pass
-        pass
 
 
 

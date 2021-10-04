@@ -5,6 +5,7 @@ import triangles
 import grades
 import rock_paper_scissors
 import assignment_four
+from abs_value import absolute_value
 
 
 class MyTestCase(unittest.TestCase):
@@ -27,6 +28,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_points_3(self):
         self.assertEqual(3, grades.points(88, False))
+
 
     def test_rps(self):
         self.assertEqual("You win!", rock_paper_scissors.who_wins(3, 2))

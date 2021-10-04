@@ -1,10 +1,10 @@
 
 def absolute_value(x):
-    answer = abs(x)
-    print("The absolute value of", x, "is", answer)
+    if (x <= 0):
+        final = x * -1
+    else:
+        final = x
+    return final
 
-def main():
-    x = int(input("Please enter the number "))
-    absolute_value(x)
 
-main()
+
