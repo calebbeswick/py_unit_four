@@ -21,12 +21,21 @@ class MyTestCase(unittest.TestCase):
     def test_points_3(self):
         self.assertEqual(3, points(88, False))
 
+    def test_points_1(self):
+        self.assertEqual(2, points(82, False))
+
+    def test_points_2(self):
+        self.assertEqual(4.2, points(95, True))
+
+    def test_points_3(self):
+        self.assertEqual(1.2, points(77, True))
+
     # Your additional tests go below this line
 
 
-    def test_rps(self):
-        self.assertEqual("You win!", who_wins(3, 2))
-        self.assertEqual("It is a tie", who_wins(1, 1))
+    # def test_rps(self):
+    #     self.assertEqual("You win!", who_wins(3, 2))
+    #     self.assertEqual("It is a tie", who_wins(1, 1))
 
         # Put the rest of the rps tests below this line. There should be 9 in total.
 
