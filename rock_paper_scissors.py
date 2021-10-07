@@ -3,12 +3,27 @@ import random
 
 
 def who_wins(user, computer):
-    winner = 0
     if computer == 3:
         if user == 3:
             print("Its a tie!")
         elif user == 2:
             print("The computer wins!")
+        elif user == 1:
+            print("The user wins!")
+    if computer == 2:
+        if user == 2:
+            print("Its a tie!")
+        elif user == 1:
+            print("The computer wins!")
+        elif user == 3:
+            print("The user wins!")
+    if computer == 1:
+        if user == 1:
+            print("Its a tie!")
+        elif user == 3:
+            print("The computer wins!")
+        elif user == 2:
+            print("The user wins!")
 
 
 
