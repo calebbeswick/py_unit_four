@@ -32,14 +32,13 @@ class MyTestCase(unittest.TestCase):
     #     self.assertEqual("You win!", rock_paper_scissors.who_wins(3, 2))
     #     self.assertEqual("It is a tie", rock_paper_scissors.who_wins(1, 1))
 
-    # def test_get_type(self):
-    #     test = assignment_four.get_sign()
-    #     self.assertTrue(test == "*" or test == "-" or test == "+")
+    def test_get_type(self):
+        test = assignment_four.get_sign()
+        self.assertTrue(test == "*" or test == "-" or test == "+")
 
     def test_get_max(self):
-        value = assignment_four.generating_numbers()
-        self.assertTrue(5<= value <= 20)
-
+        maximum = assignment_four.num_check()
+        self.assertTrue(5 <= maximum <= 20)
 
 
 if __name__ == '__main__':

@@ -1,7 +1,6 @@
 import random
 
 
-
 def generating_numbers(maximum, minimum):
     """
 
@@ -13,20 +12,21 @@ def generating_numbers(maximum, minimum):
         maximum = 20
     elif minimum <= 5:
         minimum = 5
-    num1 = random.randint(minimum, maximum)
-    return num1
 
-def get_max():
-    maximum = int(input("Pleas enter the maximum number for the equation "))
-    minimum = int(input("Please enter the minimum number for the equation"))
-    if maximum >= 20:
-        maximum = 20
+
+def num_check():
+    """
+
+    :return:
+    """
+    x = int(input("Please enter a number above 5, but below 20 "))
+
+    if x >= 20:
+        return 20
+    elif x <= 5:
+        return 5
     else:
-        return
-
-
-def get_min():
-
+        return x
 
 
 def get_sign():
@@ -43,7 +43,23 @@ def get_sign():
     else:
         return "+"
 
-def getting_sign(sign, num1, num2):
+
+def random_number(num1, num2):
+    """
+
+    :param num1: The first number used to generate a random number
+    :param num2: The second number used to generate a random number
+    :return: returns the random number
+    """
+    if num1 < num2:
+        x = random.randint(num1, num2)
+    else:
+        x = random.randint(num2, num1)
+    return x
+
+
+
+def getting_sign(sign, ran1, ran2):
     """
 
     :param sign: the sign of the equation
@@ -51,16 +67,15 @@ def getting_sign(sign, num1, num2):
     :param num2: The second number of the equation
     """
     if sign == "*":
-        question = num1 * num2
-        print(num1, "*", num2)
+        question = ran1 * ran2
+        print(ran1, "*", ran2)
     elif sign == "-":
-        question = num1 - num2
-        print(num1, "-", num2)
+        question = ran1 - ran2
+        print(ran1, "-", ran2)
 
     else:
-        question = num1 + num2
-        print(num1, "+", num2)
-
+        question = ran1 + ran2
+        print(ran1, "+", ran2)
 
     answer = int(input("What is the answer? "))
     if answer == question:
@@ -69,13 +84,13 @@ def getting_sign(sign, num1, num2):
         print("You are incorrect")
 
 
-
-
-
 def main():
-    minimum =
     sign = get_sign()
-    num1 = generating_numbers(minimum, maximum)
-    num2 = generating_numbers(minimum, maximum)
-    getting_sign(sign, num1, num2)
+    num1 = num_check()
+    num2 = num_check()
+    ran1 = random_number(num1, num2)
+    ran2 = random_number(num1, num2)
+    getting_sign(sign, ran1, ran2)
 
+
+main()
