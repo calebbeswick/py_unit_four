@@ -1,3 +1,6 @@
+#By Caleb Beswick, last edited 10/15/21, part of unit four
+#Program to give an equation for two random numbers between 5-20
+
 import random
 
 
